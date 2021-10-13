@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Express Blog</title>
+	</head>
+	<body>
+		<header>
+            <main>
+                <h2>The Most Delicious Recipes Ever Made</h2>
+                <ul>
+                    <% recipes.forEach(r => { %>
+                        <li>
+                    
+                        <a href="/recipes/<%= r._id%>"><%= r.name %></a>
+                        <!-- <button style="display: inline; margin-right: 1rem;" data-id="<%= r._id %>">DELETE</button> -->
+                        
+                    </li>
+                    <% }); %>
+                </ul>
+            </main>
+			<h1>Recipes</h1>
+			<nav>				
+						<a href="/">Home</a><br>
+                        <a href="/new">New Recipe</a>
+
+			</nav>
+		</header>
+	</body>
+</html>
