@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const indexRouter = require('./controllers/index');
 const recipesRouter = require('./controllers/recipes')
+const methodOverride = require('method-override');
 
 //Applying and requiring express and dot env variables
 const app = express();
@@ -19,6 +20,7 @@ db.on('error', () => console.log('Mongo Down'));
 //Activating Morgan and URLE
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
 
 //ROUTES || I N D U C E S 
 app.use('/', indexRouter);
