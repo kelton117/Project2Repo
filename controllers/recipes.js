@@ -25,9 +25,9 @@ recipesRouter.get('/new', (req, res) => {
 });
 
 //DELETE
-recipesRouter.delete('/:id/delete', (req, res) => {
+recipesRouter.delete('/:id', (req, res) => {
     Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
-        res.json(deletedRecipe)
+        res.redirect('/recipes')
     });
 });
 
@@ -59,7 +59,7 @@ recipesRouter.get('/:id/edit', (req, res) => {
 //SHOW
 recipesRouter.get('/:id', async (req, res) => {
     try {
-        const recipe = await Recipe.findById(req.params.id)
+        const recipe = await Recipe.findById(req.params.id, req.body)
         res.render('show.ejs', { recipe })
     } catch (error) {
         console.log(error.message)

@@ -21,7 +21,7 @@ db.on('error', () => console.log('Mongo Down'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
-
+app.use(express.static('public'));
 //ROUTES || I N D U C E S 
 app.use('/', indexRouter);
 app.use('/', recipesRouter);

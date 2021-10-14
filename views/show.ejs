@@ -3,6 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="styles.css">
 	<title>Project 2</title>
 </head>
 
@@ -18,12 +21,24 @@
 		</nav>
 	</header>
 	<main>
-		<section>
+		<!-- <section>
 			<%= recipe.name %>
 		</section>
         <section>
             <%= recipe.description %>
         </section>
+        <section>
+            <%= recipe.ingredients %>
+		</section>
+        <section>
+            <%= recipe.instructions %>
+        </section>
+        <section>
+			<%= recipe.special %>
+		</section>
+        <section>
+			<%= recipe.chef %>
+		</section> -->
         <a href="/recipes/<%= recipe._id%>/edit">EDIT</a>
 	</main>
 </body>

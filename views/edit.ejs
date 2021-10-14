@@ -3,6 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="styles.css">
 	<title>Project 2</title>
 </head>
 
@@ -17,9 +20,19 @@
 	</header>
 	<main>
 		<form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
+			Recipe Name<br/>
 			<input type="text" name="name" /></textarea><br />
+            Describe your Recipe<br/>
 			<textarea name="description"></textarea><br />
-			<input type="submit" value="Create Recipe" />
+            Ingredients<br/>
+            <textarea name="ingredients"></textarea><br />
+            How to Make<br/>
+            <textarea name="instructions"></textarea><br />
+            Special Instructions/Ingredients<br/>
+            <textarea name="special"></textarea><br />
+            Chef<br/>
+            <textarea name="chef"></textarea><br />
+			<input type="submit" value="Edit Recipe" />
 		<br />
         
         </form>
