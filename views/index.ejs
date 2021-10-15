@@ -2,30 +2,29 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
-    /> -->
+        <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <link rel="stylesheet" href="/style.css">
 		<title>Express Blog</title>
 	</head>
-	<body>
+	<body class="index">
 		<header>
             <main>
-                <h2>The Most Delicious Recipes Ever Made</h2>
+                <h2>Where the Magic Happens</h2>
                 <ul>
+                    <h1>Recipes</h1>
                     <% recipes.forEach(r => { %>
                         <li>
                     
-                        <a href="/recipes/<%= r._id%>"><%= r.name %></a>
-                        <form method="POST" action="/recipes/<%= r._id %>?_method=DELETE" style="display: inline; margin-right: 1rem;">
-                            <input type="submit" value="DELETE">
+                        <a href="/recipes/<%= r._id%>" class="recipeName"><%= r.name %></a>
+                        <form method="POST" action="/recipes/<%= r._id %>?_method=DELETE" style="display: inline; margin-right: 1rem; padding: 30px">
+                            <input type="submit" value="DELETE" class="deleteButton">
                         </form>
                         
                     </li>
                     <% }); %>
                 </ul>
             </main>
-			<h1>Recipes</h1>
 			<nav>				
 						<a href="/">Home</a><br>
                         <a href="/new">New Recipe</a>

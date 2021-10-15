@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/KeltFieri.jpg);
+    height: 600px;
+    width: 600px;
+    font-family: Grechen Fuemen;
+}
+
+.homeTitle {
+    font-size: 45px;
+}
+
+.recipeLink {
+    font-size: 28px;
+}
+
+.recipeName {
+    font-size: 50px;
+}
+
+.edit {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/baking-background-a-variety-of-ingredients-for-baking-on-rustic-background-KM7N31.jpg);
+    height: 600px;
+    width: 600px;
+    font-family: Grechen Fuemen;
+}
+
+.index {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/Baking\ background_22.jpg);
+    height: 600px;
+    width: 600px;
+    font-family: Grechen Fuemen;
+}
+
+.newBody {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/download.jpg);
+    height: 600px;
+    width: 600px;
+    font-family: Grechen Fuemen;
+}
+
+.show {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/images.jpg);
+    height: 600px;
+    width: 600px;
+    font-family: Grechen Fuemen;
+}
+
+.showMain {
+    font-size: 30px;
+    color: white;
+}
+
+.editMain {
+    font-size: 15px;
+    color: lightseagreen;
+}

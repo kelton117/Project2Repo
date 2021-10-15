@@ -3,14 +3,13 @@
 
 <head>
 	<meta charset="utf-8">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
-    />
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <link rel="stylesheet" href="/style.css">
 	<title>Project 2</title>
 </head>
 
-<body>
+<body class="edit">
 	<header>
 		<h1>Edit <%= recipe.name %> </h1>
 		<nav>
@@ -19,20 +18,20 @@
 				
 		</nav>
 	</header>
-	<main>
+	<main class="editMain">
 		<form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
 			Recipe Name<br/>
-			<input type="text" name="name" /></textarea><br />
+			<input type="text" name="name" value="<%=recipe.name%>" /></textarea><br />
             Describe your Recipe<br/>
-			<textarea name="description"></textarea><br />
+			<textarea name="description" ><%=recipe.description%></textarea><br />
             Ingredients<br/>
-            <textarea name="ingredients"></textarea><br />
+            <textarea name="ingredients" ><%=recipe.ingredients%></textarea><br />
             How to Make<br/>
-            <textarea name="instructions"></textarea><br />
+            <textarea name="instructions" ><%=recipe.instructions%></textarea><br />
             Special Instructions/Ingredients<br/>
-            <textarea name="special"></textarea><br />
+            <textarea name="special" ><%=recipe.special%></textarea><br />
             Chef<br/>
-            <textarea name="chef"></textarea><br />
+            <textarea name="chef" ><%=recipe.chef%></textarea><br />
 			<input type="submit" value="Edit Recipe" />
 		<br />
         

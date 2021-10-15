@@ -18,7 +18,6 @@ db.on('connected', () => console.log('Connected to Mongo'));
 db.on('error', () => console.log('Mongo Down'));
 
 //Activating Morgan and URLE
-app.set("view engine", "ejs")
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
