@@ -1,6 +1,6 @@
 //Require Express/other 
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const morgan = require('morgan');
 const indexRouter = require('./controllers/index');
 const recipesRouter = require('./controllers/recipes')
